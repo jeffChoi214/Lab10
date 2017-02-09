@@ -39,6 +39,22 @@ public class Validator {
         return theDouble;
     }
 
+    public static char getYesNo(Scanner sc) {
+        char value = sc.next().charAt(0);
+        boolean isGood = true;
 
-
+        if (value != 'y' && value != 'Y' && value != 'n' && value != 'N') {
+            isGood = false;
+            while (true) {
+                System.out.print("Please enter y or n! ");
+                value = sc.next().charAt(0);
+                
+                if (value == 'y' || value == 'Y'|| value == 'n' || value == 'N') {
+                    break;
+                }
+            }
+        }
+        
+        return value;
+    }
 }

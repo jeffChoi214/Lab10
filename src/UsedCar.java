@@ -15,7 +15,6 @@ public class UsedCar extends Car {
         this.miles = theMiles;
     }
 
-
     public int getMiles() {
         return miles;
     }
@@ -25,7 +24,7 @@ public class UsedCar extends Car {
     }
 
     public void printString() {
-        System.out.printf("%-15s %-15s %-10d %-10f %-10d" , make, model, year, price, miles);
+        System.out.printf("%-15s %-15s %-10d %-15s %-15s" , make, model, year, df.format(price), mg.format(miles) + " miles");
         System.out.println("");
     }
 }

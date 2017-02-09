@@ -1,4 +1,5 @@
 import java.text.NumberFormat;
+import java.util.Locale;
 
 /*
  * Lab 9 Car Class File
@@ -9,7 +10,8 @@ public class Car {
     String model;
     int year;
     double price;
-    static NumberFormat df = NumberFormat.getCurrencyInstance();
+    NumberFormat df = NumberFormat.getCurrencyInstance();
+    NumberFormat mg = NumberFormat.getNumberInstance(Locale.US);
 
     public Car() {
         this.make = make;
