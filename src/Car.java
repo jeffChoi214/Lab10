@@ -5,11 +5,11 @@ import java.text.NumberFormat;
 */
 
 public class Car {
-    private String make;
-    private String model;
-    private int year;
-    private double price;
-    private static NumberFormat df = NumberFormat.getCurrencyInstance();
+    String make;
+    String model;
+    int year;
+    double price;
+    static NumberFormat df = NumberFormat.getCurrencyInstance();
 
     public Car() {
         this.make = make;

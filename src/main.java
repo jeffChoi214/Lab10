@@ -6,14 +6,10 @@ import java.util.Scanner;
 */
 
 public class main {
-    public static int getCars(Scanner sc) {
-        int numCars;
-
+    public static int getCars(Scanner sc, Validator validate) {
         System.out.println("Welcome to the Grand Circus Motors admin console!");
         System.out.print("How many cars are you entering: ");
-        numCars = sc.nextInt();
-        sc.nextLine();
-
+        int numCars = validate.getInt(sc);
         return numCars;
     }
     
@@ -59,6 +55,7 @@ public class main {
             sc.nextLine();
             price = Double.parseDouble(holder);
             Car theCar = new Car(make, model, year, price);
+            UsedCar testing = new UsedCar(make, model, year, price, 2828);
             carList.add(theCar);
         }
     }
@@ -84,9 +81,10 @@ public class main {
 
 
     public static void main (String[] args) {
+        Validator validate = new Validator();
         Scanner sc = new Scanner(System.in);
-        int numCars = getCars(sc);
-        
+        int numCars = getCars(sc, validate);
+
         Car[] cars = new Car[numCars];
         ArrayList<Car> carList = new ArrayList<>();
         // getInput(cars, numCars, sc);
