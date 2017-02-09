@@ -2,7 +2,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 /*
- * Lab 9 by Jeff Choi 2/6/2017
+ * Lab 10 by Jeff Choi 2/6/2017
 */
 
 public class main {
